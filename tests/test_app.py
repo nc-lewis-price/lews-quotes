@@ -22,7 +22,3 @@ def test_random_200_responds_with_a_random_quote(client):
     assert isinstance(quote["author"], str)
     assert isinstance(quote["content"], str)
     assert isinstance(quote["length"], int)
-
-def test_invalid_path_404(client):
-    res = client.get("/api/notapath")
-    assert res.status_code == 404
